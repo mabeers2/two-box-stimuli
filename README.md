@@ -15,12 +15,12 @@ Another major constraint is bilateral symmetry. Note that in Figure 1, vertices 
 
 The user specifies the desired overall dimensions of the object and also, for each of the faces, a desired angular deviation from parallelism with one of the coordinate system axes. 
 
-The variables describing a shape are $(x_i,y_i,z_i)$, $i \in \{0,2,4,6,8,10,12,14\}$ (24 total) and also 7 plane intercepts, $d_{0,1,5,4}$, $d_{4,5,6,7}$, $d_{2,3,7,6,8,9,12,13}$, $d_{0,2,6,4}$, $d_{8,10,14,12}$, $d_{12,13,15,14}, d_{10,11,15,14}$, where the subscripts indicate the vertices belonging to the appropriate plane. These 31 variables are combined into a vector $x$.
+The variables describing a shape are $(x_i,y_i,z_i)$, $i \in \lbrace 0,2,4,6,8,10,12,14\rbrace$ (24 total) and also 7 plane intercepts, $d_{0,1,5,4}$, $d_{4,5,6,7}$, $d_{2,3,7,6,8,9,12,13}$, $d_{0,2,6,4}$, $d_{8,10,14,12}$, $d_{12,13,15,14}, d_{10,11,15,14}$, where the subscripts indicate the vertices belonging to the appropriate plane. These 31 variables are combined into a vector $x$.
 
 The numerous constraints are all of one of three types, (1) Linear equality constraints, (2) linear inequality constraints, (3) quadratic inequality constraints. Aggregating all of the constraints into matrices, we seek to sample from set $S$, defined below. 
 
 $$
-S = \{x: Ax = b,\  Cx \leq d,\  x^TQx \leq 0\}
+S = \lbrace x: Ax = b,\  Cx \leq d,\  x^TQx \leq 0\rbrace
 $$
 
 All vectors $x$ satisfying the linear equality constraint can be expressed as follows, where $A^+$ is the pseudoinverse of $A$, $U$ is an orthonormal basis for the null space of $A$ and $w$ is an arbitrary vector. In this case, $w \in \mathbb{R}^3$. Matrices $A^+$ and $U$ are constructed from the SVD of $A$. 
