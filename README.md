@@ -19,9 +19,7 @@ The variables describing a shape are $(x_i,y_i,z_i)$, $i \in \lbrace 0,2,4,6,8,1
 
 The numerous constraints are all of one of three types, (1) Linear equality constraints, (2) linear inequality constraints, (3) quadratic inequality constraints. Aggregating all of the constraints into matrices, we seek to sample from set $S$, defined below. 
 
-$$
-S = \lbrace x: Ax = b,\  Cx \leq d,\  x^TQx \leq 0\rbrace
-$$
+$$S = \lbrace x: Ax = b,\  Cx \leq d,\  x^TQx \leq 0\rbrace$$
 
 All vectors $x$ satisfying the linear equality constraint can be expressed as follows, where $A^+$ is the pseudoinverse of $A$, $U$ is an orthonormal basis for the null space of $A$ and $w$ is an arbitrary vector. In this case, $w \in \mathbb{R}^3$. Matrices $A^+$ and $U$ are constructed from the SVD of $A$. 
 
