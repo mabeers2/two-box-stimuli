@@ -46,7 +46,7 @@ Sampling from $S$ is complicated by a quadratic constraint that can take several
 ### Case 1
 If $P = 0$ everywhere, then the second constraint reduces to $q^Tw + r \leq 0$ and is folded into $E$ and $F$.  
 
-$$S =  \bigg\lbrace w: \begin{pmatrix}E \\q^T\end{pmatrix}w \leq \begin{pmatrix}F \\-r\end{pmatrix}\bigg\rbrace$$
+$$S =  \bigg\lbrace w: \begin{pmatrix}E \\\q^T\end{pmatrix}w \leq \begin{pmatrix}F \\\-r\end{pmatrix}\bigg\rbrace$$
 
 ### Case 2
 If, for every $w$ such that $Ew \leq F$, $w^T Pw + q^Tw +r \leq 0$, then the second constraint is redundant and is ignored. 
